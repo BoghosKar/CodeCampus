@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CodeCampus</title>
+        <script>function check() {
+            var checkBox = document.getElementById("checbox");
+            var text1 = document.getElementsByClassName("text1");
+            var text2 = document.getElementsByClassName("text2");
+          
+            for (var i = 0; i < text1.length; i++) {
+              if (checkBox.checked == true) {
+                text1[i].style.display = "block";
+                text2[i].style.display = "none";
+              } else if (checkBox.checked == false) {
+                text1[i].style.display = "none";
+                text2[i].style.display = "block";
+              }
+            }
+          }
+          check();
+          
+
+
+          document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.elements.name.value = '';
+    e.target.elements.email.value = '';
+    e.target.elements.message.value = '';
+  });
+
+          </script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="price.css">
+    </head>
+<body>
+
+        <!-- &lt;/&gt; -->
+    
+        <nav class="nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="#"><img height="65px" width="auto" src="images/logo.png" alt="logo"></a>
+                </div>
+                <div id="mainListDiv" class="main_list">
+                    <ul class="navlinks">
+                        <li><a href="#about" class="about-link">About</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#price">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+        <div class="space spacefirst" id="about" ></div>
+        <div class="bigcontainer">
+            <div class="about-container">
+                <h2 class="about">About</h2>
+                <div class="background">
+                <p class="about">
+                    Welcome to CodeCampus, where we offer courses in front-end development and game development. Our experienced instructors will guide you through the process of learning essential skills such as HTML, CSS, and JavaScript, as well as modern front-end frameworks like React and Angular. Our game development course covers game design, programming, and development using popular game engines such as Unity and Unreal Engine. We offer both online and in-person classes to fit your schedule and learning style. Join us today and start your journey to becoming a professional front-end developer or game developer.     
+                </p>
+                </div>
+            </div>
+                    
+        </div>
+
+        <div class="space" id="team" ></div>
+        <h2 class="about" style="margin-bottom: 100px;">Our Team</h2>
+
+        <div class="team-container">
+            
+            <div class="team-member">
+                <div class="image">
+                    <img height = "100px" src="images/pp.jpg">
+                </div>
+                <div class="name">
+                    <h3 class="name">Vahe</h3>
+                </div>
+                <div class="info">
+                    <p class="info">Web Developer</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="image">
+                    <img height = "100px" src="images/pp.jpg">
+                </div>
+                <div class="name">
+                    <h3 class="name">Poghos</h3>
+                </div>
+                <div class="info">
+                    <p class="info">Game Developer, CEO</p>
+                </div>
+            </div>
+    </div>
+        <div class="container">
+            <div class="space" id="price" ></div>
+        <h2 class="about" style="margin-bottom: 100px;">Pricing</h2>
+
+        
+            <div class="package-container">
+              <div class="packages">
+                <h1>WEB Frontend</h1>
+                <h2 class="text1">&dollar;29.99</h2>
+                <ul class="list">
+                  <li class="first">HTML + CSS</li>
+                  <li>JQuery</li>
+                  <li>Bootstrap</li>
+                </ul>
+                <a href="#" class="button button1">Start Now</a>
+              </div>
+              <div class="packages">
+                <h1>WEB Backend</h1>
+                <h2 class="text1">&dollar;39.99</h2>
+                <ul class="list">
+                  <li class="first">HTML + CSS</li>
+                  <li>PHP</li>
+                  <li>WordPress</li>
+                </ul>
+                <a href="#" class="button button3">Start Now</a>
+              </div>
+              <div class="packages">
+                <h1>Game Development</h1>
+                <h2 class="text1">&dollar;49.99</h2>
+                <ul class="list">
+                  <li class="first">Unity</li>
+                  <li>Unreal Engine</li>
+                  <li>Godot</li>
+                </ul>
+                <a href="#" class="button button2">Start Now</a>
+              </div>
+              
+            </div>
+          </div>
+        <div class="space" id="contact" ></div>
+          
+          <div id="container">
+            <h1 class="h1">&bull; Contact Us &bull;</h1>
+            <div class="underline">
+            </div>
+            <div class="icon_wrapper">
+              <svg class="icon" viewBox="0 0 145.192 145.192">
+                <img src="logo.png" alt="" height="150px">
+              </svg> 
+            </div>
+            <form action="#" method="post" id="contact_form">
+              <div class="name">
+                <label for="name"></label>
+                <input type="text" placeholder="My name is" name="name" id="name_input" required>
+              </div>
+              <div class="email">
+                <label for="email"></label>
+                <input type="email" placeholder="My e-mail is" name="email" id="email_input" required>
+              </div>
+              <div class="telephone">
+                <label for="name"></label>
+                <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required>
+              </div>
+              
+              <div class="message">
+                <label for="message"></label>
+                <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
+              </div>
+              <div class="submit">
+                <input type="submit" value="Send Message" id="form_button" />
+              </div>
+            </form><!-- // End form -->
+          </div><!-- // End #container -->
+
+          
+          <footer class="footer">
+            <ul class="social-icon">
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="document-outline"></ion-icon>
+                </a></li>
+              <li class="social-icon__item"><a class="social-icon__link" href="#">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+            </ul>
+            <ul class="menu">
+              <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
+              <li class="menu__item"><a class="menu__link" href="#team">Our Team</a></li>
+              <li class="menu__item"><a class="menu__link" href="#price">Pricing</a></li>
+              <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
+        
+            </ul>
+            <p>&copy;2023 CodeCampus | All Rights Reserved</p>
+          </footer>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        </body>
+
+</html>
